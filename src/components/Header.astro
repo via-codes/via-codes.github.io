@@ -1,0 +1,46 @@
+---
+import Container from "@components/Container.astro";
+import Link from "@components/Link.astro";
+import { SITE } from "@consts";
+import ThemeToggle from "./ui/theme-toggle";
+---
+
+<header>
+  <Container>
+    <div class="flex flex-wrap gap-y-2 justify-between items-center">
+      <Link href="/" underline={false}>
+        <img
+          src="/via.svg"
+          alt="Via Codes"
+          class="h-8 w-auto [filter:brightness(0)_saturate(100%)_invert(0%)_sepia(0%)_saturate(0%)_hue-rotate(0deg)_brightness(0%)_contrast(100%)] dark:[filter:brightness(0)_saturate(100%)_invert(70%)_sepia(0%)_saturate(0%)_hue-rotate(0deg)_brightness(90%)_contrast(90%)] transition-[filter] duration-300"
+        />
+      </Link>
+      <div class="flex items-center gap-6">
+        <nav class="flex gap-1">
+          <Link href="/#experience">
+            experience
+          </Link>
+          <span>
+            {`/`}
+          </span>
+          <Link href="/#skills">
+            skills
+          </Link>
+          <span>
+            {`/`}
+          </span>
+          <Link href="/#accolades">
+            accolades
+          </Link>
+          <span>
+            {`/`}
+          </span>
+          <Link href="/blog">
+            blog
+          </Link>
+        </nav>
+        <ThemeToggle client:load />
+      </div>
+    </div>
+  </Container>
+</header>
