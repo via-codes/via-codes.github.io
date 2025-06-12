@@ -5,6 +5,6 @@ import tailwind from "@astrojs/tailwind";
 import react from "@astrojs/react";
 
 export default defineConfig({
-  site: "https://via-codes.github.io",
+  site: "https://astro-nano-demo.vercel.app",
   integrations: [mdx(), sitemap(), tailwind(), react()],
 });
